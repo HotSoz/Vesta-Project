@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Vesta</title>
+    <link rel="stylesheet" href="Css/Styles.css">
+    <style>
+        body {
+            background-image: url(images/vestabackground.jpg);
+            background-attachment: fixed;
+            background-size: 100% 100%;
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha2569/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+    <script src="js/index.js"></script>
+    
+    <script src="https://kit.fontawesome.com/9e956a9805.js" crossorigin="anonymous"></script>
+</head>
+
+
+    <body>
+        <div class="overlay">
+       
+    <!-- Header -->
+        <header class="stickyh">
+            
+            <div class="header grid-by2">
+            <div>
+                <a class="tab" id="tab1"><img class="vestologo" src="images/vestalogoy.png"></a>
+            
+            </div>
+            <div class="alignright">
+            
+            <div>
+                <a href="#"  class="topbar profilemr"><i class="fas fa-comments color w"></i></a>
+                <a href="#"  class="topbar profilemr"><i class="fas fa-user-cog colorw"></i></a>
+                <a href="#"  class="topbar"><i class="fas fa-sign-out-alt colorw"></i></a>
+            </div>
+            
+            <div style="margin-top: 20px;"><input type="text" placeholder="Search.."><button type="submit"><i class="fas fa-search"></i></button></div>
+            
+            </div>
+            </div>
+            </header>
+            
+    <!-- Navigator -->
+            
+            <nav>
+            
+                <div id="navbuttons">
+                    
+                    <div><a class="tab" id="tab1">News Feed</a></div>
+                    <div><a class="tab" id="tab2">Scoreboard</a></div>
+                    <div><a class="tab" id="tab3">Friends List</a></div>
+                </div>
+            </nav>
+            
+            
+            <!-- Section (NewsFeed) -->
+            
+            <div id="tab1container" class="tab-container">
+            <section>
+            
+            
+            <div class="imge minwidth">
+                    
+                    
+                    <!-- Head -->
+                    
+                    <div class="d1gridd gridmm">
+                        
+                        <div>
+                            <h4>Comments</h4>
+                        </div>
+                    </div>
+                
+                    <!-- Body -->
+                    
+                    
+                    
+                <div class="dd2grid ggridby2 gridn grid-container-rows">
+                         
+                        <!-- Friends -->
+                    <div id="commentDiv">
+                        <!-- <div id="comments">
+                            <img alt='PFP' src="Images/m2.png">
+                            <div class="gridby22"><p>Name N.</p><p class="commentPar">comment</p></div>
+                        </div> -->
+                        </div>
+                        <div>
+                            <input type="text" id="commentTxt" placeholder="Leave a comment...">
+                            <button type="submit" onclick="updateCom()">Commment</button>
+                        </div>
+                
+                
+                
+                </div>
+                
+            </div>
+            </section>
+            </div>
+            
+            
+            <!-- Section (Scoreboard) -->
+                    
+            <div id="tab2container" class="tab-container">
+        
+            <section>
+            
+            
+                <div class="imgs minwidth">
+                    
+                    
+                    <!-- Head -->
+                    
+                    <div class="ds1grid gridm">
+                        <div>
+                            <h4>Rank</h4>
+                        </div>
+                        <div>
+                            <h4>Player</h4>
+                        </div>
+                        <div>
+                            <h4>Score</h4>
+                        </div>
+                    </div>
+                
+                    <!-- Body -->
+                    
+                    <div class="ds2grid gridn gridsby2">
+                        
+                        
+                        
+                        <!-- Rank -->
+                        
+                        
+                        
+                        
+                        <div class="rborder hein margr alignc">
+                            <div>
+                                <img alt='PFP' src="Images/number%201%20bird.png">
+                            </div>
+                            <div>
+                                <img alt='PFP' src="Images/number2bird.png">
+                            </div>
+                            <div>
+                                <img alt='PFP' src="Images/number3bird.png">
+                            </div>
+                            <div>
+                                <p>4</p>
+                            </div>
+                            <div>
+                                <p>5</p>
+                            </div>
+                        
+                        </div>
+                        
+                        
+                        
+                        <!-- Player -->
+                        
+                        
+                        
+                        
+                        <div class="rborder hein margp">
+                        <div>
+                            <img alt='PFP' src="Images/m2.png">
+                            <div><p>Name N.</p></div>
+                        </div>
+                        <div>
+                            <img alt='PFP' src="Images/m2.png">
+                            <div><p>Name N.</p></div>
+                        
+                        </div>
+                        <div>
+                            <img alt='PFP' src="Images/m2.png">
+                            <div><p>Name N.</p></div>
+                        
+                        </div>
+                        <div>
+                            <img alt='PFP' src="Images/m2.png">
+                            <div><p>Name N.</p></div>
+                        
+                        </div>
+                        <div>
+                            <img alt='PFP' src="Images/m2.png">
+                            <div><p>Name N.</p></div>
+                        
+                        </div>
+                        </div> 
+                        
+                        <!-- Score -->
+                        
+                        
+                        
+                        <div class="hein margp">
+                        <div>
+                            <div><p>123123</p></div>
+                        
+                        </div>
+                        <div>
+                            <div><p>123123</p></div>
+                        
+                        </div>
+                        <div>
+                            <div><p>123123</p></div>
+                        
+                        </div>
+                        <div>
+                            <div><p>123123</p></div>
+                        
+                        </div>
+                        <div>
+                            <div><p>123123</p></div>
+                        
+                        </div>
+                        </div>
+                    
+                    
+                    </div>
+                
+                
+                
+                
+                
+                
+                
+                
+                </div>
+                
+            
+            </section>
+        </div>
+            
+            
+            <!-- Section (Friends) -->
+                        
+            <div id="tab3container" class="tab-container">
+            <section>
+                
+                <div class="dragging-area imgs"></div>
+            
+                <div class="imgs minwidth">
+                    
+                    
+                    <!-- Head -->
+                    
+                    <div class="d1grid gridm">
+                        <div>
+                            <h4>Friends</h4>
+                        </div>
+                        <div>
+                            <h4>Pending</h4>
+                        </div>
+                        <div>
+                            <h4>Accepted</h4>
+                        </div>
+                    </div>
+                
+                    <!-- Body -->
+                    
+                    <div class="d2grid gridn gridby2 margp">
+                        
+                        
+                        
+                        <!-- Friends -->
+                        
+                        
+                        
+                        
+                        <div class="rborder drop-area">
+                        <div class="item">
+                            <img alt='PFP' src="Images/m1.png">
+                            <div><p>Name N.</p></div>
+                        </div>
+                        <div class="item">
+                            <img alt='PFP' src="Images/m1.png">
+                            <div><p>Name N.</p></div>
+                        
+                        </div>
+                        <div class="item">
+                            <img alt='PFP' src="Images/m1.png">
+                            <div><p>Name N.</p></div>
+                        
+                        </div>
+                        <div class="item">
+                            <img alt='PFP' src="Images/m1.png">
+                            <div><p>Name N.</p></div>
+                        
+                        </div>
+                        <div class="item">
+                            <img alt='PFP' src="Images/m1.png">
+                            <div><p>Name N.</p></div>
+                        
+                        </div>
+                        </div>
+                    
+                        
+                        
+                        <!-- Pending -->
+                        
+                        
+                        
+                        
+                        <div class="rborder drop-area">
+                        <div class="item">
+                            <img alt='PFP' src="Images/m2.png">
+                            <div><p>Name N.</p></div>
+                        </div>
+                        <div class="item">
+                            <img alt='PFP' src="Images/m2.png">
+                            <div><p>Name N.</p></div>
+                        
+                        </div>
+                        <div class="item">
+                            <img alt='PFP' src="Images/m2.png">
+                            <div><p>Name N.</p></div>
+                        
+                        </div>
+                        <div class="item">
+                            <img alt='PFP' src="Images/m2.png">
+                            <div><p>Name N.</p></div>
+                        
+                        </div>
+                        <div class="item">
+                            <img alt='PFP' src="Images/m2.png">
+                            <div><p>Name N.</p></div>
+                        
+                        </div>
+                        </div> 
+                        
+                        <!-- Accepted -->
+                        
+                        
+                        
+                        <div class="drop-area">
+                        <div class="item">
+                            <img alt='PFP' src="Images/m3.png">
+                            <div><p>Name N.</p></div>
+                        </div>
+                        <div class="item">
+                            <img alt='PFP' src="Images/m3.png">
+                            <div><p>Name N.</p></div>
+                        
+                        </div>
+                        <div class="item">
+                            <img alt='PFP' src="Images/m3.png">
+                            <div><p>Name N.</p></div>
+                        
+                        </div>
+                        <div class="item">
+                            <img alt='PFP' src="Images/m3.png">
+                            <div><p>Name N.</p></div>
+                        
+                        </div>
+                        <div class="item">
+                            <img alt='PFP' src="Images/m3.png">
+                            <div><p>Name N.</p></div>
+                        
+                        </div>
+                        </div>
+                    
+                    </div>
+                
+                
+                
+                
+                
+                
+                
+                
+                </div>
+                
+            
+            </section>
+        </div>
+            <footer>
+            <div>
+                
+                
+                
+            </div>
+            
+            
+            </footer>
+     </div>
+    
+    </body>
+    
+    
+</html>
+
+<!--  <p>a;lsdkfjasl ;fjs;ldjasl ;jdlfa jsld;fkjas;ldkf jasl;dfkjasl ;dkfjal ;dkfjas;ldf kjsal; dkf jas;ldk f jasl; dkfjs al ;dga lsdhgiosp ufhsopdhf asdjfjhasldkfjsl; dfjas;ldfj a;sldf kjsl;d</p>
+            
+            <p>a;lsdkfjasl ;fjs;ldjasl ;jdlfa jsld;fkjas;ldkf jasl;dfkjasl ;dkfjal ;dkfjas;ldf kjsal; dkf jas;ldk f jasl; dkfjs al ;dga lsdhgiosp ufhsopdhf asdjfjhasldkfjsl; dfjas;ldfj a;sldf kjsl;d</p> <p>a;lsdkfjasl ;fjs;ldjasl ;jdlfa jsld;fkjas;ldkf jasl;dfkjasl ;dkfjal ;dkfjas;ldf kjsal; dkf jas;ldk f jasl; dkfjs al ;dga lsdhgiosp ufhsopdhf asdjfjhasldkfjsl; dfjas;ldfj a;sldf kjsl;d</p> <p>a;lsdkfjasl ;fjs;ldjasl ;jdlfa jsld;fkjas;ldkf jasl;dfkjasl ;dkfjal ;dkfjas;ldf kjsal; dkf jas;ldk f jasl; dkfjs al ;dga lsdhgiosp ufhsopdhf asdjfjhasldkfjsl; dfjas;ldfj a;sldf kjsl;d</p> <p>a;lsdkfjasl ;fjs;ldjasl ;jdlfa jsld;fkjas;ldkf jasl;dfkjasl ;dkfjal ;dkfjas;ldf kjsal; dkf jas;ldk f jasl; dkfjs al ;dga lsdhgiosp ufhsopdhf asdjfjhasldkfjsl; dfjas;ldfj a;sldf kjsl;d</p> <p>a;lsdkfjasl ;fjs;ldjasl ;jdlfa jsld;fkjas;ldkf jasl;dfkjasl ;dkfjal ;dkfjas;ldf kjsal; dkf jas;ldk f jasl; dkfjs al ;dga lsdhgiosp ufhsopdhf asdjfjhasldkfjsl; dfjas;ldfj a;sldf kjsl;d</p> <p>a;lsdkfjasl ;fjs;ldjasl ;jdlfa jsld;fkjas;ldkf jasl;dfkjasl ;dkfjal ;dkfjas;ldf kjsal; dkf jas;ldk f jasl; dkfjs al ;dga lsdhgiosp ufhsopdhf asdjfjhasldkfjsl; dfjas;ldfj a;sldf kjsl;d</p> <p>a;lsdkfjasl ;fjs;ldjasl ;jdlfa jsld;fkjas;ldkf jasl;dfkjasl ;dkfjal ;dkfjas;ldf kjsal; dkf jas;ldk f jasl; dkfjs al ;dga lsdhgiosp ufhsopdhf asdjfjhasldkfjsl; dfjas;ldfj a;sldf kjsl;d</p> <p>a;lsdkfjasl ;fjs;ldjasl ;jdlfa jsld;fkjas;ldkf jasl;dfkjasl ;dkfjal ;dkfjas;ldf kjsal; dkf jas;ldk f jasl; dkfjs al ;dga lsdhgiosp ufhsopdhf asdjfjhasldkfjsl; dfjas;ldfj a;sldf kjsl;d</p> <p>a;lsdkfjasl ;fjs;ldjasl ;jdlfa jsld;fkjas;ldkf jasl;dfkjasl ;dkfjal ;dkfjas;ldf kjsal; dkf jas;ldk f jasl; dkfjs al ;dga lsdhgiosp ufhsopdhf asdjfjhasldkfjsl; dfjas;ldfj a;sldf kjsl;d</p> <p>a;lsdkfjasl ;fjs;ldjasl ;jdlfa jsld;fkjas;ldkf jasl;dfkjasl ;dkfjal ;dkfjas;ldf kjsal; dkf jas;ldk f jasl; dkfjs al ;dga lsdhgiosp ufhsopdhf asdjfjhasldkfjsl; dfjas;ldfj a;sldf kjsl;d</p> <p>a;lsdkfjasl ;fjs;ldjasl ;jdlfa jsld;fkjas;ldkf jasl;dfkjasl ;dkfjal ;dkfjas;ldf kjsal; dkf jas;ldk f jasl; dkfjs al ;dga lsdhgiosp ufhsopdhf asdjfjhasldkfjsl; dfjas;ldfj a;sldf kjsl;d</p> <p>a;lsdkfjasl ;fjs;ldjasl ;jdlfa jsld;fkjas;ldkf jasl;dfkjasl ;dkfjal ;dkfjas;ldf kjsal; dkf jas;ldk f jasl; dkfjs al ;dga lsdhgiosp ufhsopdhf asdjfjhasldkfjsl; dfjas;ldfj a;sldf kjsl;d</p> <p>a;lsdkfjasl ;fjs;ldjasl ;jdlfa jsld;fkjas;ldkf jasl;dfkjasl ;dkfjal ;dkfjas;ldf kjsal; dkf jas;ldk f jasl; dkfjs al ;dga lsdhgiosp ufhsopdhf asdjfjhasldkfjsl; dfjas;ldfj a;sldf kjsl;d</p> <p>a;lsdkfjasl ;fjs;ldjasl ;jdlfa jsld;fkjas;ldkf jasl;dfkjasl ;dkfjal ;dkfjas;ldf kjsal; dkf jas;ldk f jasl; dkfjs al ;dga lsdhgiosp ufhsopdhf asdjfjhasldkfjsl; dfjas;ldfj a;sldf kjsl;d</p>-->
