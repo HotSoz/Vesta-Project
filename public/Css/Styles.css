@@ -145,7 +145,7 @@ nav {
     display: grid;
     grid-template-columns: 1fr 4fr;
     text-align: left;
-    margin: 0px 30px;
+    margin: 0px 50px;
 }
 
 .imge > div > div > div > img {
@@ -178,12 +178,24 @@ nav {
 }
 
 .gridmm {
-        margin-top: 10px;
-        margin-right:50px;
-        margin-left:50px;
+    margin-top: 10px;
+    margin-right:50px;
+    margin-left:50px;
 }
 
-/* Body */
+.styledSubmit {
+    margin: 50px;
+    background-color:  #3F0066;
+    padding: 10px;
+}
+
+.styledInp {
+    min-width: 50em;
+    height: 2em;
+}
+
+
+
 
 /* Friend */
 .item {
