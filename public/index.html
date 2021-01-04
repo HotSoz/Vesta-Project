@@ -88,8 +88,9 @@
                         </div>
                         </div>
                         <div class="styledSubmit">
-                            <!-- <textarea name="content" id="comment" rows="10" tabindex="4" required="required"></textarea> -->
-                            <input type="text" id="commentTxt" dir="auto" class="styledInp" placeholder="Leave a comment..."><br><br>
+                            <textarea class="txtarea txtcom" name="content" id="commentTxt" contenteditable="true" required="required" placeholder="Leave a comment..."></textarea>
+                            <!-- <textarea name="text" oninput='this.style.height = ""; this.style.height = this.scrollHeight + "px"'></textarea> -->
+                            <!-- <input type="text" id="commentTxt" dir="auto" class="styledInp" placeholder="Leave a comment...">--><br><br>
                             <button type="submit" onclick="updateCom()">Post</button>
                         </div>
                 

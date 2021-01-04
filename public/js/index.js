@@ -1,4 +1,6 @@
-       $(document).ready(
+$(document).ready(
+
+    //Navigation
             function(){
                 
                 var tbs = $('.tab');
@@ -22,9 +24,9 @@
                         }
                     }
                 )
-                // $('.item').draggable(){
-                //     function();
-                // }
+
+
+    //Drag and Drop               
                 let dragging;
 
                 $('.item').mousedown(
@@ -64,12 +66,30 @@
                         $('.dragging-area').css({'left':x, 'top':y})
                     }
                 )
+                
+                
+    // Comment Section            
+                var scrlHeight = $('.txtcom').height();
+
+    
+                $('.txtcom').keyup(
+                    function(){
+                        $(this).css('height', '');
+                        scrlHeight = $(this).prop('scrollHeight');
+                        $(this).css('height', scrlHeight + 'px');
+                        // oninput='this.style.height = ""; this.style.height = this.scrollHeight + "px"'
+                }
+                )
             }
             );
-        
+            
+
+
+    // Comment section
             function updateCom(){
                 var x = $('#commentTxt').val();
                 //$('#comments').first().clone().appendTo('#commentDiv').html();
                 $('#commentDiv').append("<div id='comments'><img alt='PFP' src='Images/m2.png'><div class='gridby22'><p>Name N.</p><p class='commentPar'>" + x + "</p></div></div>");
-                
+                $('#commentTxt').val('');
+                $('.txtcom').css('height', '');
             }

@@ -121,6 +121,14 @@ nav {
 
 /* NewsFeed */
 
+.txtarea {
+    resize: none;
+    overflow: hidden;
+    width: 100%;
+    max-width: 500px;
+}
+
+
 /* Head */
 .dd1grid {
     display: grid;
