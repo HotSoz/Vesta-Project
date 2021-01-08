@@ -6,6 +6,20 @@ html, body {
     font-size: 20px;
 }
 
+p {
+    display: block;
+    margin-block-start: 0%;
+    margin-block-end: 0%;
+    margin-inline-start: 0%;
+    margin-inline-end: 0%;
+}
+
+body {
+    background-image: url(../images/vestabackgrounddropplets.jpg);
+    background-attachment: fixed;
+    background-size: 100% 100%;
+}
+
 /* Header */
 
 .header {
@@ -25,7 +39,7 @@ html, body {
     height: 100%;
 }
 .overlay {
-    min-width: 100vw;
+    min-width: 100%;
     min-height: 100%;
     background-color: rgba(255,255,255, 0.2);
 }
@@ -95,7 +109,7 @@ nav {
 /* Section */
 
 .minwidth {
-    min-width: 35em;
+    min-width: 60%;
 }
 
 .minwidth2 {
@@ -108,9 +122,10 @@ nav {
 
 .gridm {
         margin-top: 10px;
-        margin-right:50px;
-        margin-left:50px;
+        margin-right:4%;
+        margin-left:5%;
 }
+
 .gridn {
         margin: 0px 50px;
 }
@@ -142,12 +157,11 @@ nav {
     height: 60px;
 }
 
-.dd2grid {
+/* .dd2grid {
     display: grid;
     grid-template-columns: 1fr;
-    color: #ffffff;
-    padding: 0px 20px;    
-}
+    color: #ffffff;    
+} */
 
 .ggridby2 > div > div {
     display: grid;
@@ -157,24 +171,20 @@ nav {
 }
 
 .imge > div > div > div > img {
-    height: 70px;
-    width: 70px;
-    padding: 10px; 
-    margin: 0% 0% 0% 30%;
+    height: 75%;
+    margin: 10% 15%;
 }
     
 .grid-container-rows {
   display:grid;
-  margin: 0px 0px;
   color: #ffffff;
   text-align:left;
   grid-template-rows: 1px 2px (auto-fit, 100px);
-  padding:1px;
 }
 
 .gridby22 {
     border-bottom: 1px solid #FAFAFA;
-    margin: 0px 10px;
+    margin: 0% 5%;
 }
 
 .d1gridd {
@@ -271,7 +281,7 @@ nav {
 .ds2grid {
     display: grid;
     grid-template-columns: 1fr 3fr 2fr;
-    color: #ffffff;  
+    color: #ffffff;
 }
 
 .gridsby2 > div > div {
