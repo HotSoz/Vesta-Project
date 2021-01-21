@@ -143,6 +143,10 @@ nav {
     max-width: 500px;
 }
 
+.likeButton {
+    display: inline-block;
+    text-align:right;
+}
 
 /* Head */
 .dd1grid {
@@ -171,7 +175,7 @@ nav {
 }
 
 .imge > div > div > div > img {
-    height: 75%;
+    height: 30%;
     margin: 10% 15%;
 }
     
