@@ -144,8 +144,12 @@ nav {
 }
 
 .likeButton {
-    display: inline-block;
+    display: flex;
     text-align:right;
+}
+
+.likeButton i {
+    margin:0% 1%;
 }
 
 /* Head */

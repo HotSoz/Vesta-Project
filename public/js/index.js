@@ -61,51 +61,83 @@ $(document).ready(
       $(this).css("height", scrlHeight + "px");
       // oninput='this.style.height = ""; this.style.height = this.scrollHeight + "px"'
     });
+    // Buttons for Like and Dislike
+    let litLike = $(".checkLike");
+    let ditLike = $(".checkDislike");
+    let disPoint = $(".dislike");
+    let dislikes = $(".dislikeCount").text();
+    let dislikeNum = parseInt(dislikes);
+    let likePoint = $(".like");
+    let likes = $(".likeCount").text();
+    let likeNum = parseInt(likes);
+    // Like Button
+    $(".like").click(function () {
+      litLike.addClass("checked");
 
-    $('.like').click(
-        function() {
-        // console.log(typeof $('.like').html())
-            let likeButton = $('.like');
-            let likes = $('.likeCount').text();
-            let likeNum = parseInt(likes);
-            if ($(likeButton).hasClass('liked')) {
-                likeNum--;
-                $('.like').removeClass('liked');
-                $('.like').addClass('unliked');
-                $('.likeCount').html(likeNum);
-                return
-            };
+      if (ditLike.hasClass("checked")) {
+        ditLike.removeClass("checked");
+        litLike.addClass("checked");
+        dislikeNum--;
+        $(".dislikeCount").html(dislikeNum);
+      }
 
-            if ($(likeButton).hasClass('unliked')) {
-                likeNum++;
-                $('.like').removeClass('unliked');
-                $('.like').addClass('liked');
-            };
-            $('.likeCount').html(likeNum);
-        }
-    )
+      if ($(likePoint).hasClass("liked")) {
+        likeNum--;
+        $(".like").removeClass("liked");
+        $(".like").addClass("unliked");
+        $(".likeCount").html(likeNum);
+        return;
+      }
+
+      if ($(likePoint).hasClass("unliked")) {
+        likeNum++;
+        $(".like").removeClass("unliked");
+        $(".like").addClass("liked");
+      }
+
+      $(".likeCount").html(likeNum);
+    });
+
+    // Dislike Button
+    $(".dislike").click(function () {
+      
+
+      if ($(litLike).hasClass("checked")) {
+        litLike.removeClass("checked");
+        ditLike.addClass("checked");
+        likeNum--;
+        $(".likeCount").html(likeNum);
+      } else {
+        ditLike.addClass("checked");
+      }
+
+      if ($(disPoint).hasClass("disliked")) {
+        dislikeNum--;
+        $(".dislike").removeClass("disliked");
+        $(".dislike").addClass("undisliked");
+        $(".dislikeCount").html(dislikeNum);
+        return;
+      }
+
+      if ($(disPoint).hasClass("undisliked")) {
+        dislikeNum++;
+        $(".dislike").removeClass("undisliked");
+        $(".dislike").addClass("disliked");
+      }
+      $(".dislikeCount").html(dislikeNum);
+    });
   }
 );
 
 // Comment section
 function updateCom() {
+  let y = "<div class='likeButton'><i class='like unliked checkLike far fa-heart'></i><p class='likeCount'>0</p><i class='dislike undisliked checkDislike fas fa-heart-broken'></i><p class='dislikeCount'>0</p></div>"
   var x = $("#commentTxt").val();
   //$('#comments').first().clone().appendTo('#commentDiv').html();
   $("#commentDiv").append(
     "<div id='comments'><img alt='PFP' src='Images/m2.png'><div class='gridby22'><p>Name N.</p><p class='commentPar'>" +
       x +
-      "</p></div><div class='like'><i class='far fa-heart'></i></div></div>"
-  );
+      "</p>" + y  );
   $("#commentTxt").val("");
   $(".txtcom").css("height", "");
-}
-
-
-const btn = document.querySelector('button'); 
-function random(number) { 
-return Math.floor(Math.random() * (number+1)); 
-} 
-btn.onclick = function() { 
-const rndCol = 'rgb(' + random(255) + ',' + random(255) + ',' + random(255) + ')'; 
-document.body.style.backgroundColor = rndCol; 
 }
