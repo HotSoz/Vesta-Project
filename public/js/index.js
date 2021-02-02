@@ -72,17 +72,21 @@ $(document).ready(
     let likeNum = parseInt(likes);
     // Like Button
     $(".like").click(function () {
-      litLike.addClass("checked");
 
-      if (ditLike.hasClass("checked")) {
+      if (ditLike.hasClass("checked" && "disliked")) {
         ditLike.removeClass("checked");
         litLike.addClass("checked");
+        $(".dislike").removeClass("disliked");
+        $(".dislike").addClass("undisliked");
         dislikeNum--;
         $(".dislikeCount").html(dislikeNum);
+      } else {
+        litLike.addClass("checked");
       }
 
       if ($(likePoint).hasClass("liked")) {
         likeNum--;
+        ditLike.removeClass("checked");
         $(".like").removeClass("liked");
         $(".like").addClass("unliked");
         $(".likeCount").html(likeNum);
@@ -91,6 +95,7 @@ $(document).ready(
 
       if ($(likePoint).hasClass("unliked")) {
         likeNum++;
+        litLike.addClass("checked");
         $(".like").removeClass("unliked");
         $(".like").addClass("liked");
       }
@@ -101,18 +106,21 @@ $(document).ready(
     // Dislike Button
     $(".dislike").click(function () {
       
+      
 
-      if ($(litLike).hasClass("checked")) {
-        litLike.removeClass("checked");
-        ditLike.addClass("checked");
+      if ($(litLike).hasClass("checked" && "liked")) {
+        $(".like").removeClass("liked");
+        $(".like").addClass("unliked");
         likeNum--;
         $(".likeCount").html(likeNum);
       } else {
         ditLike.addClass("checked");
       }
+      
 
       if ($(disPoint).hasClass("disliked")) {
         dislikeNum--;
+        litLike.removeClass("checked");
         $(".dislike").removeClass("disliked");
         $(".dislike").addClass("undisliked");
         $(".dislikeCount").html(dislikeNum);
@@ -121,6 +129,7 @@ $(document).ready(
 
       if ($(disPoint).hasClass("undisliked")) {
         dislikeNum++;
+        ditLike.addClass("checked");
         $(".dislike").removeClass("undisliked");
         $(".dislike").addClass("disliked");
       }
