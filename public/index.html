@@ -62,8 +62,8 @@
                     <div class="styledSubmit">
                         <textarea class="txtarea txtcom" name="content" id="commentTxt" contenteditable="true"
                             required="required" placeholder="Leave a comment..."></textarea>
-                        <!-- <textarea name="text" oninput='this.style.height = ""; this.style.height = this.scrollHeight + "px"'></textarea> -->
-                        <!-- <input type="text" id="commentTxt" dir="auto" class="styledInp" placeholder="Leave a comment...">--><br><br>
+                        <!---->
+                        <!----><br><br>
                         <button type="submit" onclick="updateCom()">Post</button>
                     </div>
                     <div class="dd2grid ggridby2 grid-container-rows">
@@ -73,7 +73,16 @@
                                 <div class="gridby22">
                                     <p>Name N.</p>
                                     <p class="commentPar">I was here.</p>
-                                    <div class="likeButton"><i class='like unliked checkLike far fa-heart'></i><p class="likeCount">0</p><i class="dislike undisliked checkDislike fas fa-heart-broken"></i><p class="dislikeCount">0</p></div>
+                                    <div class="likeButton">
+                                        <div class="like unliked checkLike">
+                                            <i class='far fa-heart'></i>
+                                            <p class="likeCount">0</p>
+                                        </div>
+                                        <div class="dislike undisliked checkDislike">
+                                            <i class="fas fa-heart-broken"></i>
+                                            <p class="dislikeCount">0</p>
+                                        </div>
+                                    </div>
                                 </div>
                                 <div></div>
                             </div>
