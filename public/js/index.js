@@ -62,108 +62,46 @@ $(document).ready(
       // oninput='this.style.height = ""; this.style.height = this.scrollHeight + "px"'
     });
 
-    //New Like and Dislike
-    // Buttons for Like and Dislike
-    // let litLike = $(".checkLike");
-    // let ditLike = $(".checkDislike");
-    // let disPoint = $(".dislike");
-    // let dislikes = $(".dislikeCount").text();
-    // let dislikeNum = parseInt(dislikes);
-    // let likePoint = $(".like");
-    // // let likes = $(".likeCount").text();
-    // // let likeNum = parseInt(likes);
-    // // Like Button
-    // $(".like").click(function () {
-
-    //   let likeElement = $(this).children().last().html();
-    //   console.log(likeElement);
-    //   let likes = (likeElement);
-    //   let likeNum = parseInt(likes)
-
-    //   if (ditLike.hasClass("checked" && "disliked")) {
-    //     ditLike.removeClass("checked");
-    //     litLike.addClass("checked");
-    //     $(".dislike").removeClass("disliked");
-    //     $(".dislike").addClass("undisliked");
-    //     dislikeNum--;
-    //     $(".dislikeCount").html(dislikeNum);
-    //   } else {
-    //     litLike.addClass("checked");
-    //   }
-
-    //   if ($(likePoint).hasClass("liked")) {
-    //     likeNum--;
-    //     ditLike.removeClass("checked");
-    //     $(".like").removeClass("liked");
-    //     $(".like").addClass("unliked");
-    //     $(".likeCount").html(likeNum);
-    //     return;
-    //   }
-
-    //   if ($(likePoint).hasClass("unliked")) {
-    //     likeNum++;
-    //     litLike.addClass("checked");
-    //     $(".like").removeClass("unliked");
-    //     $(".like").addClass("liked");
-    //   }
-
-    //   $('.likeCount').html(likeNum);
-    // });
-
-    // // Dislike Button
-    // $(".dislike").click(function () {
-      
-      
-
-    //   if ($(litLike).hasClass("checked" && "liked")) {
-    //     $(".like").removeClass("liked");
-    //     $(".like").addClass("unliked");
-    //     likeNum--;
-    //     $(".likeCount").html(likeNum);
-    //   } else {
-    //     ditLike.addClass("checked");
-    //   }
-      
-
-    //   if ($(disPoint).hasClass("disliked")) {
-    //     dislikeNum--;
-    //     litLike.removeClass("checked");
-    //     $(".dislike").removeClass("disliked");
-    //     $(".dislike").addClass("undisliked");
-    //     $(".dislikeCount").html(dislikeNum);
-    //     return;
-    //   }
-
-    //   if ($(disPoint).hasClass("undisliked")) {
-    //     dislikeNum++;
-    //     ditLike.addClass("checked");
-    //     $(".dislike").removeClass("undisliked");
-    //     $(".dislike").addClass("disliked");
-    //   }
-    //   $(".dislikeCount").html(dislikeNum);
-    // });
-    $('.like').click(function () {
-
-      let likeNum = $(this).children().last().html();
-      let thisPoint = $(this)
-      let likePoint = parseInt(likeNum);
-    
-      if ($(this).hasClass('unliked')) {
-        $(thisPoint).removeClass('unliked');
-        $(thisPoint).addClass('liked');
-        likePoint++;
-        $(likeNum).html(likePoint);
-        console.log(likeNum)
-        return;
+    $(document).on('click', '.like', function() {
+      let currentVal = $(this).children().last().html();
+      let siblingVal = $(this).siblings().first().children().last().html();
+      if ($(this).siblings().first().hasClass("checked")) {
+        currentVal = Number(currentVal) + 1;
+        $(this).children().last().html(currentVal);
+        siblingVal = Number(siblingVal) - 1;
+        $(this).siblings().first().children().last().html(siblingVal);
+        $(this).siblings().first().removeClass('checked');
+        $(this).addClass('checked');
+      } else if ($(this).hasClass('checked')) {
+        currentVal = Number(currentVal) - 1;
+        $(this).children().last().html(currentVal);
+        $(this).removeClass('checked');             
+      } else {
+        $(this).addClass('checked');
+        currentVal = Number(currentVal) + 1;
+        $(this).children().last().html(currentVal);        
       }
-    
-      if ($(this).hasClass('liked')) {
-        $(thisPoint).removeClass('liked');
-        $(thisPoint).addClass('unliked');
-        likePoint--;
-      }
+    });
 
-      $(likeNum).html(likePoint);
+    $(document).on('click', '.dislike', function() {
+      let currentVal = $(this).children().last().html();
+      let siblingVal = $(this).siblings().first().children().last().html();
+      if ($(this).siblings().first().hasClass("checked")) {
+        currentVal = Number(currentVal) + 1;
+        $(this).children().last().html(currentVal);
+        siblingVal = Number(siblingVal) - 1;
+        $(this).siblings().first().children().last().html(siblingVal);
+        $(this).siblings().first().removeClass('checked');
+        $(this).addClass('checked');
+      } else if ($(this).hasClass('checked')) {
+        currentVal = Number(currentVal) - 1;
+        $(this).children().last().html(currentVal);
+        $(this).removeClass('checked');             
+      } else {
+        $(this).addClass('checked');
+        currentVal = Number(currentVal) + 1;
+        $(this).children().last().html(currentVal);        
+      }
     });
   }
 );
@@ -181,8 +119,8 @@ function updateCom() {
       <i class="fas fa-heart-broken"></i>
       <p class="dislikeCount">0</p>
   </div>
-</div>
-`
+  </div>
+  `
   var x = $("#commentTxt").val();
   //$('#comments').first().clone().appendTo('#commentDiv').html();
   $("#commentDiv").append(
